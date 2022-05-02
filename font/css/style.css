@@ -1,0 +1,17 @@
+.font1 {
+font-family: sculpin,sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.font2 {
+    font-family: sculpin,sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.font3 {
+    font-family: sculpin,sans-serif;
+font-weight: 400;
+font-style: italic;
+}

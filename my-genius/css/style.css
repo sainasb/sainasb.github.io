@@ -1,0 +1,76 @@
+.container {
+    width: 700px;
+    margin: 0px auto;
+    border: 15px rgb(240, 189, 206) double;
+    padding: 20px;
+    background-color: rgb(212, 135, 135);
+}
+
+.container2 {
+    width: 600px;
+    margin: 0px auto;
+    border: 20px rgb(204, 97, 97) double;
+    padding: 10px;
+    background-color: rgb(235, 220, 233);
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(231, 172, 150);
+}
+
+ul.nav li {
+    display: inline-block;
+}
+
+ul.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: lightcoral
+}
+
+body {
+    background-color: rgb(187, 223, 203)
+}
+
+.container3 {
+    width: 200px;
+    margin: 20px;
+    border: 2px dotted black;
+    padding: 20px;
+    background-color: rgb(200, 230, 221);
+    float: left;
+}
+
+.container4 {
+    width: 400px;
+    margin: 20px;
+    border: 2px dotted black;
+    padding: 20px;
+    background-color: rgb(200, 230, 221);
+}
+
+.container5 {
+    width: 560px;
+    margin: 0 auto;
+    border: 2px dotted black;
+    padding: 20px;
+    background-color: rgb(219, 204, 212);
+}
+
+.container6 {
+    width: 600px;
+    margin: 0 auto;
+    border: 2px dotted black;
+    padding: 20px;
+    background-color: rgb(197, 235, 228);
+}
