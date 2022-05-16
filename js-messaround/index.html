@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Messaround</title>
+</head>
+
+<body>
+    <h1>Let's learn javascript!</h1>
+    <h2>How do we onclick events and alerts?</h2>
+    <a href="http://www.eastsideprep.org" target="_blank" onclick="alert('Warning! You are navigating away from my page!')">go to my school's website</a>
+    <!--challenge #1 - do your own link with alert-->
+
+    <h1>Let's look at all of the school's athletics photos.</h1>
+    <a href="http://eastsideprepeagles.org" target="_blank" onclick="alert('Warning, there might be some photos of people making funny faces.')">Go to the photos!</a>
+
+    <h2>How do I change HTML content with javascript?</h2>
+    <h2>What's my secret identity?</h2>
+    <p id="secret"></p>
+    <button onclick="document.getElementById('secret').innerHTML='Nana nana nana, Batman!';document.getElementById('secret').style.display='block'">Reveal</button>
+    <button onclick="document.getElementById('secret').style.display='none'">Hide!</button>
+
+    <!--DO your own 2 truths and a lie-->
+
+    <ol>
+        <li>I broke my arm once when I was 7 doing a hackbend bridge over on a rainy day on a rock.</li>
+        <li>I have eaten jellyfish.</li>
+        <li>I have run a marathon.</li>
+    </ol>
+    <p id="secret1"></p>
+    <button onclick="document.getElementById('secret1').innerHTML='3. I have run a marathon.';document.getElementById('secret').style.display='block'">Reveal</button>
+    <button onclick="document.getElementById('secret1').style.display='none'">Hide!</button>
+
+    <h2>How do we change an image with javascript?</h2>
+    <img src="images/pic_bulboff.gif" alt="bulb off" id="bulb">
+    <br>
+    <br>
+    <button onclick="document.getElementById('bulb').src='images/pic_bulbon.gif'">Turn on light</button>
+    <!--off is challenge-->
+    <button onclick="document.getElementById('bulb').src='images/pic_bulboff.gif'">Turn off light</button>
+
+    <h2>How do we change css styles with functions?</h2>
+    <p id="alice">Hi. I am alice.</p>
+    <button onclick="shrinkAlice()">Cake: Eat me</button>
+    <!--Drink me is challenge-->
+    <button onclick="growAlice()">Potion: Drink me</button>
+
+    <script>
+        function shrinkAlice() {
+            let aliceParagraph = document.getElementById('alice')
+            aliceParagraph.style.color = 'blue'
+            aliceParagraph.style.fontSize = '10px'
+                /*new element*/
+            aliceParagraph.style.fontWeight = '900'
+        }
+
+        function growAlice() {
+            let aliceParagraph = document.getElementById('alice')
+            aliceParagraph.style.color = 'red'
+            aliceParagraph.style.fontSize = '30px'
+                /*new element*/
+            aliceParagraph.style.fontVariant = 'small-caps'
+        }
+    </script>
+</body>
+
+</html>
