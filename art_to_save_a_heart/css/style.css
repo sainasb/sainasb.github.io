@@ -37,7 +37,7 @@ ul.nav {
 }
 
 ul.nav li {
-    float: left;
+    display: inline-block;
 }
 
 ul.nav li a {
@@ -48,8 +48,8 @@ ul.nav li a {
     text-decoration: none;
 }
 
-a:hover {
-    color: blanchedalmond;
+li a:hover {
+    background-color: rgb(60, 113, 98);
 }
 
 .active {
