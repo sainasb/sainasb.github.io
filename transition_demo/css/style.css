@@ -1,0 +1,133 @@
+body {
+    background-color: gray;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: darksalmon;
+    margin: 40px auto;
+    animation-name: square-to-circle;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0;
+        background-color: darksalmon;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 50% 0;
+        background-color: lightsalmon;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 0 50% 0 50%;
+        background-color: rgb(233, 122, 159);
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 0 50% 0;
+        background-color: rgb(194, 49, 97);
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background-color: darksalmon;
+        transform: rotate(180deg);
+    }
+}
+
+.box2 {
+    width: 75px;
+    height: 75px;
+    background-color: darksalmon;
+    margin: 40px auto;
+    animation-name: square-to-circle2;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes square-to-circle2 {
+    0% {
+        border-radius: 0;
+        background-color: darksalmon;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 50% 0;
+        background-color: rgb(194, 49, 97);
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 50% 0;
+        background-color: rgb(233, 122, 159);
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 0 50% 0;
+        background-color: lightsalmon;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background-color: darksalmon;
+        transform: rotate(180deg);
+    }
+}
+
+.box3 {
+    width: 75px;
+    height: 75px;
+    background-color: darksalmon;
+    margin: 35px auto;
+    animation-name: square-to-circle3;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes square-to-circle3 {
+    0% {
+        border-radius: 0;
+        background-color: darksalmon;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 0 50% 0 50%;
+        background-color: rgb(194, 49, 97);
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 50% 0;
+        background-color: rgb(233, 122, 159);
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 0 50% 0;
+        background-color: lightsalmon;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50% 50% 50% 50%;
+        background-color: darksalmon;
+        transform: rotate(180deg);
+    }
+}
+
+.textbox {
+    width: fit-content;
+    height: 200px;
+    background-color: darksalmon;
+    border-radius: 35% 35% 35% 35%;
+}
