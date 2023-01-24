@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(228, 211, 194);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: lightsalmon;
+    margin: 40px auto;
+    animation-name: square1-to-circle;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    float: left;
+    padding: 40px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 60px auto;
+    animation-name: circle-to-square1;
+    animation-duration: 7s;
+    animation-delay: .4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    float: left;
+    padding: 40px;
+    margin-left: 70px;
+}
+
+.square1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 70px auto;
+    animation-name: colorchange;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    float: left;
+    padding: 40px;
+    margin-left: 70px;
+}
+
+@keyframes square1-to-circle {
+    0% {
+        border-radius: 0;
+        background-color: lightsalmon;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 0 0 0;
+        background-color: darksalmon;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: salmon;
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background-color: darksalmon;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 50%;
+        background-color: lightsalmon;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes circle-to-square1 {
+    0% {
+        border-radius: 50%;
+        background-color: #3456eb;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 50% 50% 50% 0;
+        background-color: blue;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: darkblue;
+        transform: rotate(90deg);
+    }
+    75% {
+        border-radius: 50% 0 0 0;
+        background-color: blue;
+        transform: rotate(135deg);
+    }
+    100% {
+        border-radius: 0;
+        background-color: #3456eb;
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        background-color: rgb(249, 146, 211);
+    }
+    25% {
+        background-color: rgb(255, 175, 110);
+    }
+    50% {
+        background-color: rgb(255, 244, 120);
+    }
+    75% {
+        background-color: rgb(148, 255, 202);
+    }
+    100% {
+        background-color: rgb(255, 124, 200);
+    }
+}
