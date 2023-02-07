@@ -16,16 +16,6 @@ body {
     padding: 20px;
 }
 
-.left {
-    float: left;
-    width: 20%;
-    background-color: rgb(79, 198, 245);
-    color: white;
-    padding: 0 15px;
-    margin: 10px;
-    margin-left: 20px
-}
-
 .nav a {
     background-color: rgb(79, 198, 245);
     color: white;
@@ -50,12 +40,20 @@ body {
     margin: 10px;
 }
 
+.left {
+    float: left;
+    width: 20%;
+    background-color: rgb(79, 198, 245);
+    color: white;
+    padding: 3%;
+    margin: 3% 3% 3% 3%;
+}
+
 .main {
     float: left;
-    width: 50%;
-    padding: 0 15px;
-    margin: 10px;
-    margin-left: 20px
+    width: 42%;
+    padding: 3%;
+    margin: 3% 3% 3% 3%;
 }
 
 .right {
@@ -63,8 +61,8 @@ body {
     width: 20%;
     background-color: rgb(79, 198, 245);
     color: white;
-    padding: 0 15px;
-    margin: 10px;
+    padding: 3%;
+    margin: 3% 3% 3% 3%;
 }
 
 .footer {
@@ -89,10 +87,20 @@ footer {
 }
 
 @media only screen and (max-width:620px) {
-    .left,
-    .main,
+    .left {
+        width: 100%;
+        padding: 3%;
+        margin: unset;
+    }
+    .main {
+        width: 100%;
+        padding: 3%;
+        margin: unset;
+    }
     .right {
         width: 100%;
+        padding: 3%;
+        margin: unset;
     }
 }
 

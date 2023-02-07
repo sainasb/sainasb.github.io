@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+body {}
+
+.nav {
+    height: 120px;
+    background-color: black;
+    color: rgb(213, 188, 234);
+    align-items: center;
+    position: sticky;
+    top: -50px;
+}
+
+h1 {
+    font-family: "arpona", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.container2 {
+    width: 40%;
+    float: right;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.container1 {
+    width: 20%;
+    margin-left: 500px;
+    float: right;
+    text-align: center;
+    margin-right: 230px;
+}
+
+.container3 {
+    width: 20%;
+    float: center;
+    text-align: center;
+    margin: 10px 500px 10px 500px;
+}
+
+.container4 {
+    width: 80%;
+    float: center;
+    text-align: center;
+    margin: 10px 130px 10px 130px;
+}
+
+.container5 {
+    width: 33%;
+    float: left;
+    border-radius: 9px;
+    background-color: gray;
+    padding: 10px;
+    margin-left: 15%;
+    color: white;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+h2 {
+    font-family: "arpona", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "arpona", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    font-family: "arpona", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: white;
+}
+
+.container6 {
+    width: 35%;
+    float: left;
+    border-radius: 9px;
+    background-color: gray;
+    padding: 10px;
+    margin-right: 15%;
+    color: white;
+    font-size: 12px;
+}
+
+.container7 {
+    width: 39%;
+    float: left;
+    border-radius: 9px;
+    background-color: gray;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    padding: 5px;
+    margin-left: 10%;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.container8 {
+    width: 39%;
+    float: left;
+    border-radius: 9px;
+    background-color: gray;
+    padding: 5px;
+    margin-right: 10%;
+    color: white;
+    background: rgba(0, 0, 0, .5);
+    font-size: 12px;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4 {
+    position: relative;
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1200px;
+}
+
+.bgimg-1 {
+    background-image: url("../images/AbstractForAunt.jpg");
+    opacity: 1;
+    height: 500px;
+}
+
+.bgimg-2 {
+    background-image: url("../images/gallery.png");
+    opacity: 1;
+    height: 500px;
+}
+
+.bgimg-3 {
+    background-image: url("../images/IMG_8587.JPG");
+    opacity: 1;
+    height: 500px;
+}
+
+.bgimg-4 {
+    background-image: url("../images/MountainForManikAji.jpg");
+    opacity: 1;
+    height: 500px;
+}
+
+.logo {
+    float: left;
+    width: 30%;
+    padding: 40px;
+}
+
+.logo p {
+    margin: 0;
+}
+
+nav {
+    float: left;
+    width: 70%;
+    text-align: right;
+    padding: 40px;
+}
+
+nav a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    background-color: rgb(213, 188, 234);
+    text-align: center;
+    border-bottom: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    height: auto;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.left {
+    float: left;
+    width: 20%;
+    background-color: rgb(213, 188, 234);
+}
+
+.nav-left a {
+    background-color: rgb(213, 188, 234);
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.main {
+    float: left;
+    width: 60%;
+    color: rgb(213, 188, 234);
+}
+
+.right {
+    float: left;
+    width: 20%;
+    background-color: white;
+    padding: 15px 0;
+    background-color: rgb(213, 188, 234);
+}
+
+.lefttop {
+    float: left;
+    width: 30%;
+}
+
+.leftbottom {
+    margin-top: 40px;
+    width: 55%;
+    float: left;
+    padding-left: 20px;
+    padding: 0 30px;
+    object-fit: contain;
+    height: 200px;
+}
+
+.footer {
+    text-align: center;
+    background-color: rgb(213, 188, 234);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    clear: both;
+    margin-top: 10px;
+}
+
+footer {
+    width: 60%;
+    margin: auto;
+}
