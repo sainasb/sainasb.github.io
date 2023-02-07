@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/vbf8nix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         .main {
             float: center;
@@ -22,7 +24,7 @@
         img {
             padding: 15px
         }
-        /*I got all of thi sinternal css for W3Schools*/
+        /*I got all of this internal css for W3Schools*/
         
         .topnav {
             background-color: #333;
@@ -79,6 +81,14 @@
                 text-align: left;
             }
         }
+        
+        .right {
+            float: right;
+            width: 68%;
+            background-color: rgb(79, 198, 245);
+            color: white;
+            margin: 3% 3% 3% 3%;
+        }
     </style>
 </head>
 
@@ -121,14 +131,24 @@
     </div>
 
     <div class="right">
-        <img src="images/MountainForManikAji.jpg" width="260px">
-        <img src="images/AbstractForAunt.jpg" width="260px">
-        <img src="images/IMG_8587.JPG" width="260px">
+        <img src="images/MountainForManikAji.jpg" width="50%">
+        <img src="images/AbstractForAunt.jpg" width="49%">
+        <img src="images/IMG_8587.JPG" width="99%">
     </div>
     <div class="footer">
         <footer>Web 2 &copy; 2023</footer>
     </div>
-    </div>
+    <script>
+        /*All of this script is from a W3Schools Demo*/
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>
