@@ -40,7 +40,9 @@
         h6 {
             position: relative;
             color: hsl(0, 0%, 68%);
-            font-family: "ofelia-text", sans-serif;
+            font-weight: bold;
+            font-family: "Anonymous Pro", monospace;
+            letter-spacing: 7px;
             overflow: hidden;
             border-right: 2px solid hsl(0, 0%, 80%);
             white-space: nowrap;
@@ -52,7 +54,7 @@
                 width: 0;
             }
             to {
-                width: 1000px;
+                width: 1100px;
             }
         }
         
@@ -99,6 +101,12 @@
             background-color: white;
             padding: 20px;
         }
+        
+        .example {
+            float: left;
+            padding: 25px;
+            background-color: white;
+        }
     </style>
 </head>
 
@@ -117,11 +125,52 @@
                 <br>
 
             </div>
-            <div style="background-color: white;">
-
+            <div class="example" style="width:600px;margin: 20px 350px 60px 350px;">
+                To get this, we need to to first define what we want our text to look like. In the following, this is what goes into style for what our text should look like.
+                <br>
+                <br>
+                <code>        h2 { <br>
+                    position: relative; <br>
+                    color: hsl(0, 0%, 68%); <br>
+                    font-family: "ofelia-text", sans-serif;<br>
+                    overflow: hidden;<br>
+                    border-right: 2px solid hsl(0, 0%, 80%);<br>
+                    white-space: nowrap;<br>
+                    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;<br>
+                }</code>
+                <br>
+                <br>
+                <br> However, just this won't do anything. We also need to implement the keyframes in our style so that it actually has an animation:
+                <br>
+                <br>
+                <code>        @keyframes typewriter { <br>
+                    from { <br>
+                        width: 0;<br>
+                    }<br>
+                    to {<br>
+                        width: 1000px;<br>
+                    }
+                }<br>
+                <br><br>
+                @keyframes blinkTextCursor {<br>
+                    from {<br>
+                        border-right-color: hsl(0, 0%, 80%);<br>
+                    }<br>
+                    to {<br>
+                        border-right-color: transparent;<br>
+                    }
+                }</code>
             </div>
+
+
         </div>
 
+    </div>
+    <br>
+    <div class="example" style="width: 100%">
+        <p style="text-align: center;">Now, all we have to do is use that text we animated. Above, we animated h2, let's test it out:</p>
+
+        <h6 style="color:black">Hey look it works! Cool right? Now, you should try testing it out!</h6>
     </div>
 </body>
 
