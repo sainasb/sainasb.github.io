@@ -6,7 +6,6 @@ body {}
 
 .nav {
     height: 120px;
-    background-color: black;
     color: rgb(213, 188, 234);
     align-items: center;
     position: sticky;
@@ -14,51 +13,31 @@ body {}
 }
 
 h1 {
-    font-family: "arpona", serif;
+    text-align: center;
+    font-family: "mencken-std", sans-serif;
     font-weight: 700;
-    font-style: normal;
     font-size: 50px;
+    font-style: normal;
 }
 
 .container2 {
     width: 40%;
-    float: right;
+    float: left;
     text-align: center;
-    margin-right: 100px;
-}
-
-.container1 {
-    width: 20%;
-    margin-left: 500px;
-    float: right;
-    text-align: center;
-    margin-right: 230px;
 }
 
 .container3 {
     width: 20%;
-    float: center;
+    float: left;
     text-align: center;
-    margin: 10px 500px 10px 500px;
+    margin: 10%;
 }
 
 .container4 {
-    width: 80%;
-    float: center;
-    text-align: center;
-    margin: 10px 130px 10px 130px;
-}
-
-.container5 {
-    width: 33%;
+    width: 40%;
     float: left;
-    border-radius: 9px;
-    background-color: gray;
-    padding: 10px;
-    margin-left: 15%;
-    color: white;
-    font-size: 12px;
-    margin-right: 5px;
+    text-align: center;
+    margin: 10%;
 }
 
 h2 {
@@ -68,9 +47,10 @@ h2 {
 }
 
 p {
-    font-family: "arpona", serif;
+    font-family: "mencken-std-text", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
 }
 
 a {
@@ -136,10 +116,29 @@ a {
     height: 500px;
 }
 
+.bgimg-1 h1 {
+    font-family: "continuo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 150px;
+}
+
+.main2 {
+    width: 100%;
+}
+
 .bgimg-2 {
-    background-image: url("../images/gallery.png");
     opacity: 1;
-    height: 500px;
+    height: 700px;
+}
+
+.bgimg-2 p {
+    opacity: 1;
+    height: 900px;
+    font-family: "basic-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
 }
 
 .bgimg-3 {
@@ -166,9 +165,11 @@ a {
 
 nav {
     float: left;
-    width: 70%;
+    width: 100%;
     text-align: right;
     padding: 40px;
+    text-align: center;
+    margin: auto;
 }
 
 nav a {

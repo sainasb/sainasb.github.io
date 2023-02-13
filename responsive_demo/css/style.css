@@ -46,14 +46,15 @@ body {
     background-color: rgb(79, 198, 245);
     color: white;
     padding: 3%;
-    margin: 3% 3% 3% 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .main {
     float: left;
-    width: 42%;
     padding: 3%;
-    margin: 3% 3% 3% 3%;
+    width: 60%;
+    margin-top: 3%;
 }
 
 .right {
@@ -62,7 +63,7 @@ body {
     background-color: rgb(79, 198, 245);
     color: white;
     padding: 3%;
-    margin: 3% 3% 3% 3%;
+    margin-top: 3%;
 }
 
 .footer {
@@ -79,10 +80,14 @@ footer {
 
 @media (min-width:621px) and (max-width:1000px) {
     .main {
-        width: 80%;
+        width: 70%;
     }
     .right {
-        width: 100%;
+        width: 67%;
+        margin-left: 3%;
+    }
+    .left {
+        width: 30%
     }
 }
 
