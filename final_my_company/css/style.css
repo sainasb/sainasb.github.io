@@ -139,6 +139,25 @@ a {
     margin-top: -2%
 }
 
+.location {
+    background-color: black;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.location-left {
+    width: 40%;
+    margin: 5%;
+    float: left;
+}
+
+.location-right {
+    width: 40%;
+    margin: 5%;
+    float: left;
+}
+
 .main2 {
     width: 100%;
 }
