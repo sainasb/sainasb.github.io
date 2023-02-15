@@ -1,0 +1,162 @@
+.parallax {
+    /*  code from https://blog.logrocket.com/create-parallax-scrolling-css/ */
+    /* The image used */
+    background-image: url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8&w=1000&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    /* dimensions are important, ensure it is tall enough to scroll */
+    min-height: 100vh;
+    /* you are free to lay out the container items with flexbox or whatever means you wish */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "mencken-std", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    font-style: normal;
+}
+
+h2 {
+    text-align: center;
+    font-family: "mencken-std", sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+    font-style: normal;
+}
+
+p {
+    font-family: "mencken-std-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    background-color: #76a6f3;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.background-image {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-size: cover;
+    background-image: url(https://th.bing.com/th/id/R.42c4eeb58d71bae3f3db311481ef3028?rik=BO%2b2NOne93qMXQ&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f03%2f28%2f425586-nature-landscape-mountains-trees-forest-sunset-mist.jpg&ehk=0OV1BqPtXut3L%2fFg%2f6kHsY496avZ6WZLmW7bz%2brPj3s%3d&risl=&pid=ImgRaw&r=0);
+}
+
+.split-screen {
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    animation: reduceSize 1.5s 0.5s, moveRight 1.5s 3s;
+    animation-fill-mode: forwards;
+}
+
+.content {
+    color: rgb(0, 0, 0);
+    font-size: 10vw;
+    text-transform: uppercase;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 4;
+    opacity: 0;
+    transform: translateY(100vh);
+    animation: fadeInUp 2s 0.5s, moveRight 1.5s 3s, changeBackground 1.5s 3s;
+    animation-fill-mode: forwards;
+}
+
+.content p {
+    margin: 0;
+}
+
+.content .comma {
+    color: #2c2d2b;
+    opacity: 1;
+    animation: fadeOut 0.5s forwards 2.5s;
+}
+
+@keyframes reduceSize {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes changeBackground {
+    to {
+        background-image: url(https://th.bing.com/th/id/R.42c4eeb58d71bae3f3db311481ef3028?rik=BO%2b2NOne93qMXQ&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f03%2f28%2f425586-nature-landscape-mountains-trees-forest-sunset-mist.jpg&ehk=0OV1BqPtXut3L%2fFg%2f6kHsY496avZ6WZLmW7bz%2brPj3s%3d&risl=&pid=ImgRaw&r=0);
+        background-size: 200%;
+        background-position: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation-duration: 3s;
+    }
+}
