@@ -2,10 +2,7 @@
     box-sizing: border-box;
 }
 
-body {}
-
 .nav {
-    height: 120px;
     align-items: center;
     position: sticky;
     top: -50px;
@@ -13,9 +10,17 @@ body {}
 
 h1 {
     text-align: center;
+    font-family: "arpona", serif;
+    font-weight: 400;
+    font-size: 50px;
+    font-style: normal;
+}
+
+.content h1 {
+    text-align: center;
     font-family: "mencken-std", sans-serif;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 100px;
     font-style: normal;
 }
 
@@ -71,6 +76,12 @@ h2 {
     font-style: normal;
 }
 
+.bg1 {
+    background-image: url("/images/aboutbg1.png");
+    opacity: 1;
+    height: 500px;
+}
+
 p {
     font-family: "mencken-std-text", sans-serif;
     font-weight: 400;
@@ -111,31 +122,127 @@ a {
     font-size: 12px;
 }
 
-.bgimg-1,
-.bgimg-2,
-.bgimg-3,
-.bgimg-4 {
+.containe {
+    width: 100%;
+    height: 100vh;
     position: relative;
-    opacity: 1;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1200px;
 }
 
-.bgimg-1 {
-    background-image: url("../images/bg1.jpg");
+.background-image {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-size: cover;
+    background-image: url(https://th.bing.com/th/id/R.42c4eeb58d71bae3f3db311481ef3028?rik=BO%2b2NOne93qMXQ&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f03%2f28%2f425586-nature-landscape-mountains-trees-forest-sunset-mist.jpg&ehk=0OV1BqPtXut3L%2fFg%2f6kHsY496avZ6WZLmW7bz%2brPj3s%3d&risl=&pid=ImgRaw&r=0);
+}
+
+.split-screen {
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    animation: reduceSize 1.5s 0.5s, moveRight 1.5s 3s;
+    animation-fill-mode: forwards;
+}
+
+.content {
+    color: rgb(0, 0, 0);
+    font-size: 10vw;
+    text-transform: uppercase;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 4;
+    opacity: 0;
+    transform: translateY(100vh);
+    animation: fadeInUp 2s 0.5s, moveRight 1.5s 3s, changeBackground 1.5s 3s;
+    animation-fill-mode: forwards;
+}
+
+.content p {
+    margin: 0;
+}
+
+.content .comma {
+    color: #2c2d2b;
     opacity: 1;
-    height: 650px;
+    animation: fadeOut 0.5s forwards 2.5s;
+}
+
+@keyframes reduceSize {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes changeBackground {
+    to {
+        background-image: url(https://th.bing.com/th/id/R.42c4eeb58d71bae3f3db311481ef3028?rik=BO%2b2NOne93qMXQ&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2017%2f03%2f28%2f425586-nature-landscape-mountains-trees-forest-sunset-mist.jpg&ehk=0OV1BqPtXut3L%2fFg%2f6kHsY496avZ6WZLmW7bz%2brPj3s%3d&risl=&pid=ImgRaw&r=0);
+        background-size: 200%;
+        background-position: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation-duration: 3s;
+    }
 }
 
 .bgimg-1 h1 {
-    font-family: "continuo", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 150px;
     margin-top: -2%;
+    color: white;
+}
+
+.bgimg-1 p {
+    font-family: "continuo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
     color: white;
 }
 
@@ -180,6 +287,13 @@ a {
     height: 500px;
 }
 
+.bgimg-1 {
+    background-image: url("../images/IMG_8587.JPG");
+    opacity: 1;
+    height: 400px;
+    background-color: #4c4e4b;
+}
+
 .bgimg-4 {
     background-image: url("../images/MountainForManikAji.jpg");
     opacity: 1;
@@ -197,46 +311,17 @@ a {
 }
 
 nav {
-    float: left;
     width: 100%;
     text-align: right;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
     margin: auto;
 }
 
-.nav1 {
-    float: left;
-    width: 25%;
-    padding: 5%;
-}
-
-.nav2 {
-    float: left;
-    width: 25%;
-    padding: 5%;
-}
-
-.nav3 {
-    float: left;
-    width: 25%;
-    padding: 5%;
-}
-
-.nav4 {
-    float: left;
-    width: 25%;
-    padding: 5%;
-}
-
 nav a {
-    font-family: "mencken-std-text", sans-serif;
-    font-weight: 600;
-    font-style: normal;
     font-size: 20px;
     text-align: center;
     padding: 5%;
-    border-radius: 20%;
     font-family: "lemonde-courrier", serif;
     font-weight: 400;
     font-style: normal;
@@ -261,12 +346,6 @@ img {
     border-radius: 20px;
 }
 
-.left {
-    float: left;
-    width: 20%;
-    background-color: rgb(213, 188, 234);
-}
-
 .nav-left a {
     background-color: rgb(213, 188, 234);
     color: white;
@@ -282,14 +361,6 @@ img {
     float: left;
     width: 60%;
     color: rgb(213, 188, 234);
-}
-
-.right {
-    float: left;
-    width: 20%;
-    background-color: white;
-    padding: 15px 0;
-    background-color: rgb(213, 188, 234);
 }
 
 .lefttop {
