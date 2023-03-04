@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="27px" viewBox="0 0 28 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/32x32/instagram/primary</title>
+    <g id="Homepage-01-07" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Wood-+-Panel-B3" transform="translate(-1089.000000, -5511.000000)">
+            <g id="Group-23" transform="translate(0.000000, 5434.000000)">
+                <g id="Group-18" transform="translate(1031.000000, 57.000000)">
+                    <g id="Group-5" transform="translate(0.000000, 19.000000)">
+                        <g id="icon/32x32/instagram_primary" transform="translate(58.000000, 1.000000)">
+                            <rect id="Rectangle-10-Copy-2" x="0" y="0" width="28" height="27"></rect>
+                            <g id="instagram" transform="translate(3.500000, 3.375000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+                                <rect id="Rectangle" stroke-width="2" x="0" y="0" width="21" height="20.25" rx="5.83333333"></rect>
+                                <path d="M14.827477,9.50624169 C15.1043194,11.3064969 14.1526863,13.0750087 12.466843,13.893236 C10.7809996,14.7114634 8.74103562,14.394929 7.40648054,13.1080366 C6.07192546,11.8211442 5.74366762,9.85403611 6.59219967,8.22840142 C7.44073173,6.60276674 9.2747439,5.68512055 11.1416753,5.95207579 C13.0479859,6.22466191 14.5447951,7.66801362 14.827477,9.50624169 Z" id="Path" stroke-width="2"></path>
+                                <line x1="16.183125" y1="4.640625" x2="16.191875" y2="4.640625" id="Path" stroke-width="2.5"></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
