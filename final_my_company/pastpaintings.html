@@ -183,7 +183,6 @@
             color: black;
             margin-left: 10%;
             margin-right: 10%;
-            text-align: center;
             margin-top: 4%;
             margin-bottom: 4%;
         }
@@ -195,7 +194,47 @@
             font-size: 50px;
             text-align: center;
         }
+        
+        .popup {
+            display: none;
+        }
+        
+        .photo-overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 3;
+            left: 0;
+            background-size: cover;
+            z-index: 3;
+        }
+        
+        .close-photo-overlay {
+            font-size: 30px;
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            color: white;
+            z-index: 2;
+            padding: 6px 9px;
+        }
     </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.photo-overlay').hide();
+            $('.thumb').click(function(event) {
+                event.preventDefault();
+                var imageUrl = $(this).attr('href');
+                $('.photo-overlay').show().css('background-image', 'url(' + imageUrl + ')');
+            });
+            $('.close-photo-overlay').css('cursor', 'pointer').click(function() {
+                $('.photo-overlay').hide();
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -240,19 +279,38 @@
 
     </p>
     <div class="container">
-        <div class="image-container">
-            <div class="image"><img src="images/bird.JPG" alt="Bird Painting"></div>
-            <div class="image"><img src="images/IMG_8587.JPG" alt="Fish Painting"></div>
-            <div class="image"><img src="images/IMG_8610.JPG" alt="PaintDrip Painting"></div>
-            <div class="image"><img src="images/mountain.jpg" alt="Mountian Painting"></div>
-            <div class="image"><img src="images/AbstractForAunt.jpg" alt="Abstract Painting"></div>
-            <div class="image"><img src="images/butterfly.png" alt="Butterfly Painting"></div>
-            <div class="image"><img src="images/flower.png" alt="Flower Painting"></div>
-
+        <div class="photo-overlay">
+            <div class="close-photo-overlay"><i class="fa fa-times"></i></div>
         </div>
-        <div class="popup-image">
-            <span>&times;</span>
-            <div class="image"><img src="images/bird.JPG" alt="Bird Painting"></div>
+        <div class="image-container">
+
+            <div class="image">
+                <a href="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/335141024_549205437260214_3433728526561196340_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=vLg1ZQhvJNgAX95qlW5&_nc_ht=scontent-sea1-1.xx&oh=00_AfB1jgNXHK00fXPlj0zLNAJpbgA6Z2fZ9oZX_iEmRBt36Q&oe=6410D551"
+                    class="thumb"><img src="images/bird.JPG" /></a>
+            </div>
+            <div class="image imgBox">
+                <a href="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/335177185_623021672964250_213526805748211198_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=qa0eRLQKwwgAX-t4rcH&_nc_ht=scontent-sea1-1.xx&oh=00_AfBJ5Goa7tigUXYwCpoW3BoX66xsL07glh2ZhNZy5Ps-zA&oe=641131B1"
+                    class="thumb"><img src="images/IMG_8587.JPG" alt="Fish Painting"></a>
+            </div>
+            <div class="image">
+                <a class="thumb" href="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/330593073_222057093719100_8325518980881024594_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=zfkvWPmpiuAAX-nF7Nw&_nc_ht=scontent-sea1-1.xx&oh=00_AfCCg_es53nlnoOipB1_SN5mLRZ_e0Po2yccWbjV98kxFQ&oe=64105E6D"><img src="images/IMG_8610.JPG" alt="PaintDrip Painting"></a>
+            </div>
+            <div class="image">
+                <a href="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/335358648_733267194973132_7367367206248862756_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=8_ERl2XGokAAX8IRvCp&_nc_ht=scontent-sea1-1.xx&oh=00_AfBzdY3pBaJ9RDevT8mRVb7HcTfJjuYdB92ieImH5LCqaw&oe=640F64BE"
+                    class="thumb"><img src="images/mountain.jpg" alt="Mountian Painting"></a>
+            </div>
+            <div class="image">
+                <a href="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/335402767_3684311028463134_2418118266268206974_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=C1kDnuO0zAkAX_1ION5&_nc_ht=scontent-sea1-1.xx&oh=00_AfBq-UWbH3jW7ddUAKp5SkiMuMtzJNhrwQHCw1Uem8KdPw&oe=640FA710"
+                    class="thumb"><img src="images/AbstractForAunt.jpg" alt="Abstract Painting"></a>
+            </div>
+            <div class="image">
+                <a href="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/335016206_1375943653199085_5354473925671017150_n.jpg?stp=cp6_dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=PcqrtQPwI1MAX8W_vf9&_nc_ht=scontent-sea1-1.xx&oh=00_AfCnIpKXs2LUF2Jl3pbDwuqgxgxRkgSG33e4hTTA01abcA&oe=6410E0ED"
+                    class="thumb"><img src="images/butterfly.png" alt="Butterfly Painting"></a>
+            </div>
+            <div class="image">
+                <a href="https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/335432535_194120013256712_1457994073846347888_n.jpg?stp=cp6_dst-jpg&_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=iX5ohabVYOEAX_3Dssi&_nc_ht=scontent-sea1-1.xx&oh=00_AfBS3ssDNz1OFg3j5eGJ7lUUF61eP3utHKoeDYPQt7pTYA&oe=64103086"
+                    class="thumb"><img src="images/flower.png" alt="Flower Painting"></a>
+            </div>
 
         </div>
     </div>
@@ -270,7 +328,7 @@
             <h3 style="color:white">Quick Links</h3>
             <p class="footer-links">
 
-                <a href="index.html" style="font-size: 15px;text-align: center;">Home</a>
+                <a href="index.html" style="font-size: 15px;text-align: left;">Home</a>
                 <br>
                 <a href="pastpaintings.html" style="font-size: 15px;text-align: left;">Past Paintings</a>
                 <br>
@@ -280,28 +338,14 @@
                 <br>
                 <a href="pricing.html" style="font-size: 15px;text-align: left;">Pricing</a>
                 <br>
-                <a href="abouttheartist.html" style="font-size: 15px;text-align:left;">About The Artist</a>
+                <a href="abouttheartist.html" style="font-size: 15px;text-align: left;">About The Artist</a>
             </p>
 
             <p>Sai Save &copy; 2023</p>
         </div>
 
     </footer>
-    <script>
-        document.querySelectorAll('.image-container img').forEach(image => {
-            image.onclick = () => {
-                document.querySelector('.popup-image').style.display = 'block';
-                document.querySelector('.popupimage img').src = image.getAttribute('src');
 
-
-            }
-        });
-
-        document.querySelector('.popup-image span').onclick = () => {
-            document.querySelector('.popup-image').style.display = 'none';
-
-        }
-    </script>
 </body>
 
 </html>
