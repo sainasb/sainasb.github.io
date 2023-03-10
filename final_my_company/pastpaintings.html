@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Paintings</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/vbf8nix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            position: relative;
+            min-height: 100vh;
+            background: #ddd
+        }
+        
+        .container h1 {
+            font-size: 40px;
+            font-family: "mundial", sans-serif;
+            ;
+            font-weight: normal;
+            padding: 15px;
+            color: #333;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        
+        .container .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            padding: 10px;
+        }
+        
+        .container .image-container .image {
+            height: 250px;
+            width: 350px;
+            border: 10px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .container .image-container .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: .2x linear:
+        }
+        
+        .container .image-container .image:hover img {
+            transform: scale(1.1);
+        }
+        
+        .container .popup-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .9);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            display: none;
+        }
+        
+        .container .popup-image span {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 40px;
+            font-weight: bolder;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        .container .popup-image img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #fff;
+            border-radius: .5px;
+            width: 750px;
+            object-fit: cover;
+        }
+        
+        @media (max-width:768px) {
+            .container .popup-image img {
+                width: 95%;
+            }
+        }
+        
+        .topnav {
+            background-color: #ffffff;
+            overflow: hidden;
+            margin-left: 23%;
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: "mundial", sans-serif;
+        }
+        
+        h3 {
+            font-family: "mundial", sans-serif;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            /*I changed the color here to better fit the website*/
+            background-color: #4aaeca;
+            color: white;
+        }
+        
+        .topnav .icon {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        
+        h1 {
+            font-family: "mundial", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 50px;
+        }
+        
+        p {
+            font-family: "mundial", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 14px;
+            color: black;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+            margin-top: 4%;
+            margin-bottom: 4%;
+        }
+        
+        footer h1 {
+            font-family: "mundial", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+
+        <a class="navbar-brand" style="font-size: 60px; color:black; margin-left:-20px" href="index.html">Sai Save</a>
+        <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+
+
+        <div class="collapse navbar -collapse collapsibleNavBar" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <button onclick="location.href='pastpaintings.html';" style="margin-top: 10px; position:relative; margin-left: 700px;font-family:arpona,serif;border-radius:20px" class="button order"><span>Purchasing</span></button>
+                </li>
+            </ul>
+
+        </div>
+        <br>
+
+    </nav>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="pastpaintings.html">Past Paintings</a>
+        <a href="ourcause.html">Our Cause</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="abouttheartist.html">About The Artist</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <h1>Image Gallery</h1>
+    <p>Looking at my image gallery before purchasing will give you a clear idea of the quality of my work and the range of designs I offer. It can also inspire you for custom orders, as you can see the different styles and techniques I use to create unique
+        pieces. So, take a look at my gallery and let it be the inspiration for your next bespoke order!
+
+
+
+    </p>
+    <div class="container">
+        <div class="image-container">
+            <div class="image"><img src="images/bird.JPG" alt="Bird Painting"></div>
+            <div class="image"><img src="images/IMG_8587.JPG" alt="Fish Painting"></div>
+            <div class="image"><img src="images/IMG_8610.JPG" alt="PaintDrip Painting"></div>
+            <div class="image"><img src="images/mountain.jpg" alt="Mountian Painting"></div>
+            <div class="image"><img src="images/AbstractForAunt.jpg" alt="Abstract Painting"></div>
+            <div class="image"><img src="images/butterfly.png" alt="Butterfly Painting"></div>
+            <div class="image"><img src="images/flower.png" alt="Flower Painting"></div>
+
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <div class="image"><img src="images/bird.JPG" alt="Bird Painting"></div>
+
+        </div>
+    </div>
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+
+        </div>
+
+        <div class="footer-left">
+            <h3 style="color:white">Quick Links</h3>
+            <p class="footer-links">
+
+                <a href="index.html" style="font-size: 15px;">Home</a>
+                <br>
+                <a href="pastpaintings.html" style="font-size: 15px;">Past Paintings</a>
+                <br>
+                <a href="ourcause.html" style="font-size: 15px;">Our Cause</a>
+                <br>
+                <a href="contact.html" style="font-size: 15px;">Contact Us</a>
+                <br>
+                <a href="pricing.html" style="font-size: 15px;">Pricing</a>
+                <br>
+                <a href="abouttheartist.html" style="font-size: 15px;">About The Artist</a>
+            </p>
+
+            <p>Sai Save &copy; 2023</p>
+        </div>
+
+    </footer>
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popupimage img').src = image.getAttribute('src');
+
+
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+
+        }
+    </script>
+</body>
+
+</html>

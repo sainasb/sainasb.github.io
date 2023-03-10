@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/vbf8nix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .topnav {
+            background-color: #ffffff;
+            overflow: hidden;
+            margin-left: 23%;
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: #000000;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: "mundial", sans-serif;
+        }
+        
+        h3 {
+            font-family: "mundial", sans-serif;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            /*I changed the color here to better fit the website*/
+            background-color: #4aaeca;
+            color: white;
+        }
+        
+        .topnav .icon {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        
+        .container1 {
+            width: 100%;
+        }
+        
+        .container {
+            width: 100%;
+            height: 300px;
+        }
+        
+        .bgimg-1 {
+            background-image: url("https://wallpaperaccess.com/full/2312666.jpg");
+            height: 400px;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 5%;
+            position: relative;
+            opacity: 1;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 1600px;
+            border-radius: 2em;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .pricing2 {
+            width: 40%;
+            margin: 5%;
+            float: left;
+            background-color: white;
+            padding: 5%;
+            border-radius: 1em;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .pricing {
+            width: 40%;
+            margin: 5%;
+            float: left;
+            background-color: white;
+            padding: 5%;
+            border-radius: 1em;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .pricing h1 {
+            font-family: "mundial", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 40px;
+            color: #000000;
+        }
+        
+        .pricing h2 {
+            font-family: "mundial", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 28px;
+            color: #000000;
+            text-align: center;
+        }
+        
+        .pricing p {
+            font-family: "mundial", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 14px;
+            color: black;
+        }
+        
+        h1 {
+            font-family: "mundial", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 50px;
+        }
+        
+        @media (min-width:621px) and (max-width:1600px) {
+            .bgimg-1 {
+                height: 1300px
+            }
+            .pricing {
+                width: 100%;
+                margin: 5%;
+                float: left;
+                background-color: white;
+                padding: 5%;
+                border-radius: 1em;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .leftprice {
+                width: 40%;
+                margin: 5%;
+                float: left;
+            }
+            .rightprice {
+                width: 40%;
+                margin: 5%;
+                float: left;
+            }
+        }
+        
+        @media only screen and (max-width:620px) {
+            .bgimg-1 {
+                height: 4110px;
+            }
+            .pricing {
+                width: 100%;
+                padding: 3%;
+                margin: unset;
+            }
+            .pricing2 {
+                width: 100%;
+                padding: 3%;
+                margin: unset;
+            }
+            img {
+                width: 100%;
+            }
+            .leftprice {
+                width: 90%;
+                margin: 5%;
+                float: left;
+            }
+            .rightprice {
+                width: 90%;
+                margin: 5%;
+                float: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+
+        <a class="navbar-brand" style="font-size: 60px; color:black; margin-left:-20px" href="index.html">Sai Save</a>
+        <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+
+
+        <div class="collapse navbar -collapse collapsibleNavBar" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <button onclick="location.href='pastpaintings.html';" style="margin-top: 10px; position:relative; margin-left: 700px;font-family:arpona,serif;border-radius:20px" class="button order"><span>Purchasing</span></button>
+                </li>
+            </ul>
+
+        </div>
+        <br>
+
+    </nav>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="pastpaintings.html">Past Paintings</a>
+        <a href="ourcause.html">Our Cause</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="abouttheartist.html">About The Artist</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <br>
+    <h1>Pricing</h1>
+    <br>
+    <h3 style="text-align:center; font-size: 25px;">Have you tried our art pieces - No? Well, let's get you started. </h3>
+    <div class="bgimg-1">
+        <div class="leftprice">
+            <div class="pricing">
+                <h1>
+                    Acrylic
+                </h1>
+                <br>
+                <p style="text-align:center">A custom acrylic painting is a personalized work of art that reflects your individual style and taste, which can be used as a striking centerpiece for your space, a heartfelt gift for a loved one, or a way to capture a special memory.
+                    The vibrant colors and versatility of acrylic painting bring any subject to life, and our skilled artists can create a unique masterpiece that will be treasured.
+                    <br> __________ <br> Available in much larger sizes.
+                    <br> __________ <br> Color intensity: Acrylic paints are known for their vibrant and bright colors in comparision to watercolor.Acrylic paints offer a wide range of vibrant colors that can be mixed to create an endless variety of shades
+                    and hues.
+                    <br> __________ <br> Durability: Acrylic paints are more durable than watercolor paints and can withstand more wear and tear over time.
+                </p>
+                <h2>$0.79/inch squared</h2>
+            </div>
+            <div class="pricing">
+                <h1>
+                    Color Pencil
+                </h1>
+                <br>
+                <p style="text-align:center">Color pencils offer unique advantages over other art mediums, such as versatility, portability, and precise control over color and detail. They produce vibrant colors that can be blended and layered to create a wide range of effects. Moreover,
+                    they are non-toxic, odorless, and require no special equipment or solvents to use, making them safe and easy to use. Choose color pencils for beautiful and detailed artwork
+
+                    <br> __________ <br> Versatility: Color pencils can be used to create a wide range of effects, from bold and vibrant to soft and subtle. They are suitable for different styles of art, including realism, abstract, and illustration.
+                    <br> __________ <br> Precise control: Color pencils allow for precise control over color and detail. Artists can create fine lines, texture, and shading with ease, enabling them to achieve intricate and detailed artwork.
+                </p>
+                <p style="text-align: center;color:gray; font-size: 20px;margin-bottom:-2%;">Starts at </p>
+                <h2>$50 per piece</h2>
+            </div>
+        </div>
+        <div class="rightprice">
+            <div class="pricing">
+                <h1>
+                    Charcoal
+                </h1>
+                <br>
+                <p style="text-align:center">A custom charcoal art piece is a unique and personalized way to capture memories or express personality. It is a one-of-a-kind creation tailored to specific preferences that will provide joy and inspiration for a long time. The rich texture
+                    and depth of charcoal drawings add sophistication and elegance to any room, making it a worthwhile investment that will last for years.
+
+                    <br> __________ <br> Depth and texture: Charcoal has a unique ability to create depth and texture in an artwork. The soft and smudgy texture of charcoal allows for blending and layering, resulting in a rich and nuanced artwork.
+                    <br> __________ <br> Timelessness: Charcoal art pieces have a timeless quality that never goes out of style. They have been used for centuries by artists, and continue to be popular today.
+                </p>
+                <p style="text-align: center;color:gray; font-size: 20px;margin-bottom:-2%;">Starts at </p>
+                <h2>$50 per piece</h2>
+            </div>
+            <div class="pricing">
+                <h1>
+                    Water
+                </h1>
+                <h1>Color</h1>
+                <br>
+                <p style="text-align:center">A watercolor custom art piece is an excellent choice for customers who appreciate the delicate, transparent colors that blend seamlessly into one another, creating an ethereal quality. It offers a range of techniques, including washes,
+                    glazes, and wet-on-wet painting. Watercolor paintings are also known for their longevity and resistance to fading, making them a timeless addition to any art collection.
+
+                    <br> __________ <br>Transparency and luminosity: Watercolors are known for their transparency, which allows light to pass through the pigment and reflect off the white surface of the paper, giving them a luminous quality.
+                    <br> __________ <br> Expressiveness: Can be applied in a loose, free-flowing style to allow the artist to convey emotion and movement in their artwork, making them ideal for creating expressive art.
+                </p>
+                <p style="text-align: center;color:gray; font-size: 20px;margin-bottom:-2%;">Starts at </p>
+                <h2>$50 per piece</h2>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+
+        </div>
+
+        <div class="footer-left">
+            <h3 style="color:white">Quick Links</h3>
+            <p class="footer-links">
+
+                <a href="index.html" style="font-size: 15px;">Home</a>
+                <br>
+                <a href="pastpaintings.html" style="font-size: 15px;">Past Paintings</a>
+                <br>
+                <a href="ourcause.html" style="font-size: 15px;">Our Cause</a>
+                <br>
+                <a href="contact.html" style="font-size: 15px;">Contact Us</a>
+                <br>
+                <a href="pricing.html" style="font-size: 15px;">Pricing</a>
+                <br>
+                <a href="abouttheartist.html" style="font-size: 15px;">About The Artist</a>
+            </p>
+
+            <p>Sai Save &copy; 2023</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

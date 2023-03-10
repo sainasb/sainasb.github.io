@@ -70,22 +70,10 @@ h1 {
     margin-bottom: 5%;
 }
 
-h2 {
-    font-family: "arpona", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .bg1 {
     background-image: url("/images/aboutbg1.png");
     opacity: 1;
     height: 500px;
-}
-
-p {
-    font-family: "mencken-std-text", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 
 a {
@@ -381,6 +369,10 @@ section {
     .footer-distributed .footer-left p.footer-links {
         line-height: 1.8;
     }
+}
+
+h3 {
+    font-family: "mundial", sans-serif;
 }
 
 .bgimg-2 p {
